@@ -1,0 +1,63 @@
+<html>
+<meta charset="UTF-8">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="./latte_views.css">
+   	<style type="text/css">
+		   .el-col-1, .el-col-2, .el-col-3, .el-col-4, .el-col-5, .el-col-6, .el-col-7, .el-col-8, .el-col-9, .el-col-10, .el-col-11, .el-col-12, .el-col-13, .el-col-14, .el-col-15, .el-col-16, .el-col-17, .el-col-18, .el-col-19, .el-col-20, .el-col-21, .el-col-22, .el-col-23, .el-col-24 {
+		    float: left;
+		    box-sizing: border-box;
+		}
+
+	   	@media (min-width: 768px) {
+	   		.el-col-sm-18 {
+		    width: 75%;
+			}
+			.el-col-sm-6 {
+			    width: 25%;
+			}
+	   	}
+	   	.nav-item {
+			font-size: 16px;
+		    color: #5e6d82;
+		    line-height: 40px;
+		    height: 40px;
+		    margin: 0;
+		    padding: 0;
+		    text-decoration: none;
+		    display: block;
+		    position: relative;
+		    transition: all .3s;
+		}
+		.nav-item.active {
+			color: #20a0ff;
+		}
+	   	.side-nav li {
+		    list-style: none;
+		}
+   		.demo-block {
+		    border: 1px solid #eaeefb;
+		    border-radius: 4px;
+		    transition: .2s;
+		}
+		
+		.demo-block .source {
+		    padding: 24px;
+		}
+   	</style>
+</head>
+
+<body>
+    <div id="demo">
+    	
+    </div>
+</body>
+<script type="text/javascript" src="./latte_lib.js"></script>
+<script type="text/javascript" src="./latte_view.js"></script>
+<script type="text/javascript" src="./latte_views.js"></script>
+<script type="text/javascript" src="./demo.js"></script>
+<script type="text/javascript">
+    latte.require("demo");
+</script>
+
+</html>

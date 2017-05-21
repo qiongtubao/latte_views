@@ -1,0 +1,5 @@
+div.latte-checkbox.checkbox (data:"checkbox",list:"checkboxs")
+	latte
+		latte.latte-checkbox-input  (click:"click", glass:"{{checkedClass}}")
+			latte.latte-checkbox-inner 
+		span.latte-checkbox-label "{{key}}"

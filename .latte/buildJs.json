@@ -1,0 +1,26 @@
+{
+	"keys": {
+
+	},
+	"build": [
+		{
+			"command": "three",
+			"types": "js",
+			"files": {
+				"./src": "latte_views"
+			},
+			"out": "./html/latte_views.js",
+			"init": "./index.js"
+		},{
+			"command": "three",
+			"types": "js",
+			"files": {
+				"./demo":  "demo"
+			},
+			"out": "./html/demo.js"
+		}
+	],
+	"files_modules": {
+		
+	}
+}

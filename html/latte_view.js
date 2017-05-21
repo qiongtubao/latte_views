@@ -1,0 +1,1 @@
+../../../../gitwork/latte_view/build/html5/latte_view.js

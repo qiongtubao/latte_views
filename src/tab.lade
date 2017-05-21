@@ -1,0 +1,10 @@
+div.latte-tabs (data:"tab")
+	div.latte-tabs-header
+		div.latte-tabs-nav-wrap
+			div.latte-tabs-nav-scroll
+				div.latte-tabs-nav (list:"tabs")
+					div.latte-tabs-item (glass:"{{selected}}",click:"click") "{{name}}"
+	div.latte-tabs-body (list:"tabs")
+		div (show:"!!{{selected}} ")
+			div (data:"route")
+				div (route:"index")

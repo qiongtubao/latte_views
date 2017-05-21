@@ -1,0 +1,6 @@
+div.latte-radio (data:"radio")
+	latte.radio (list:"radios")
+		latte
+			latte.latte-radio-input (click:"click", glass:"{{checkedClass}}")
+				latte.latte-radio-inner 
+			span "{{key}}"

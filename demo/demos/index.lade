@@ -1,0 +1,8 @@
+div 
+	div.left.el-col-sm-6.el-col-24
+		ul.side-nav (list:"list")
+			li.nav-item (glass:"{{activeClass}}")
+				a (click:"click") "{{name}}" 
+	div.right.el-col-sm-18.el-col-24 (route:"index", data:"route")
+		
+
