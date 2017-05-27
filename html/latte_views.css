@@ -220,14 +220,12 @@
 		color: #bfcbd9;
 	    font-size: 12px;
 	    transition: transform .3s;
-	    transform: translateY(-50%) rotate(180deg);
+	    transform: translateY(-50%) rotate(0deg);
 	    line-height: 16px;
 	    top: 50%;
 	    cursor: pointer;
 	}
-	.latte-icon-caret-top:before {
-	    content: "\E607";
-	}
+	
 	.latte-input-icon:after {
 	    content: "";
 	    height: 100%;
@@ -286,7 +284,12 @@
 	    padding-top: 6px;
 	    text-align: left;
 	}
-	
+	.select-open:before {
+		content: "\E604";
+	}
+	.select-close:before{
+		content: "\E605";
+	}
 	.latte-selectScroll-list {
 		padding: 0;
 	    margin: 0;

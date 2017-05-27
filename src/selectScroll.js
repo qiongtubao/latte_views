@@ -2,6 +2,7 @@ module.exports = {
 	tag: "selectScroll",
 	view: require("./selectScroll.lade"),
 	data: {
+		status:"select-close",
 		selectIndex: 0,
 		selectValue: "请选择",
 		selects: [{
@@ -17,9 +18,28 @@ module.exports = {
 		}],
 		show: false,
 		selectOpen: function() {
-			this.set("show", !this.get("show"));
+			var status = !this.get("show");
+			this.set("status", status ? "select-open": "select-close");
+			this.set("show", status);
 		},
+		scrollTop: 0,
 		scroll: function(e, view) {
+			console.log(e);
+			/**
+			console.log(e);
+			var hourScrollDom = view.node();
+			var len = view.getChildren(0).children.length;
+			var allHeight = view.getChildren(0).style("height");
+			var index = allHeight.indexOf("px");
+			var allH = allHeight.substring(0, index) - 0;
+			var height = allH/len;
+			var index = Math.round(hourScrollDom.scrollTop/height);
+			console.log("start",hourScrollDom.scrollTop);
+			this.set("selectIndex", index);
+			this.set("selectValue", this.get("selects").get(index).get("key"));
+			this.set("scrollTop", (index)*height );
+			console.log("end",(index)*height, view.node().scrollTop);
+			*/
 			var hourScrollDom = view.node();
 			var len = view.getChildren(0).children.length;
 			var allHeight = view.getChildren(0).style("height");
@@ -28,8 +48,19 @@ module.exports = {
 			var height = allH/len;
 			var index = Math.round(hourScrollDom.scrollTop/height);
 			this.set("selectIndex", index);
-			console.log(this);
 			this.set("selectValue", this.get("selects").get(index).get("key"));
+			//console.log(this.get("scrollTop"), index);
+			//this.set("scrollTop", (index)* height );
+			//console.log(this.get("scrollTop"), index,view.node().scrollTop);
+			//console.log(view.now().scrollTop);
+			
+
+			//console.log(view.node());
+			console.log(hourScrollDom, hourScrollDom.scrollTop, (index) , height);
+
+			hourScrollDom.scrollTop =(index) * height;
+			//view.node().scrollTop = index * height + "px";
+			
 		}
 	},
 	dataEvents: [{

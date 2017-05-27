@@ -1,8 +1,8 @@
 div.latte-select (data:"select")
 	div.latte-input
-		div.latte-input-icon.latte-icon-caret-top (click:"selectOpen")
+		div.latte-input-icon.latte-icon-caret-top (glass:"{{status}}",click:"selectOpen")
 		input.latte-input-inner (duplex:"selectValue")	
 	div.latte-select-dropdown-wrap.latte-scrollbar-warp (show:"{{show}}")
 		div.latte-scrollbar-view.latte-select-dropdown-list (list:"selects")
 			div.latte-select-dropdown-item.li (click:"click")
-				label "{{key}}"
+				latte "{{key}}"
