@@ -2,6 +2,7 @@ module.exports = {
 	tag: "select",
 	view: require("./select.lade"),
 	data: {
+		status:"select-close",
 		selectIndex: 0,
 		selectValue: "请选择",
 		selects: [{
@@ -13,7 +14,10 @@ module.exports = {
 		}],
 		show: false,
 		selectOpen: function() {
-			this.set("show", !this.get("show"));
+			var status = !this.get("show");
+			
+			this.set("status", status ? "select-open": "select-close");
+			this.set("show", status);
 		}
 	},
 	dataEvents: [{

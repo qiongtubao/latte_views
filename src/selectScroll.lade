@@ -1,10 +1,10 @@
 div.latte-selectScroll (data:"selectScroll")
 	div.latte-input
-		div.latte-input-icon.latte-icon-caret-top (click:"selectOpen")
+		div.latte-input-icon.latte-icon-caret-top (glass:"{{status}}",click:"selectOpen")
 		input.latte-input-inner (duplex:"selectValue")
 	div.latte-selectScroll-wrapper (show:"{{show}}")
-		div.latte-selectScroll-wrap (scroll:"scroll")
-			div.latte-selectScroll-list (list:"selects")
+		div.latte-selectScroll-wrap (scrollTop:"scrollTop", scroll:"scroll")
+			div.latte-selectScroll-list (list:"selects"  )
 				div.latte-selectScroll-item.li (click:"click")
 					latte  "{{key}}"
 			div.latte-selectScroll-cover
