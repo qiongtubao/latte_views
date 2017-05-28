@@ -7,4 +7,8 @@ var obj = latte_lib.object.create({
 		}
 	}
 });
+obj.on("data.radio.selectIndex", function(data) {
+	console.log(obj.get("data.radio.selectIndex"));
+	obj.set("data.result", obj.get("data.radio.selectIndex"));
+})
 module.exports = obj;

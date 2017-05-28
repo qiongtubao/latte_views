@@ -3,3 +3,4 @@ div
 		div.demo-block
 		div.source
 			checkbox 
+			p "{{result}}"
