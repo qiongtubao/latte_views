@@ -25,7 +25,9 @@ module.exports = {
 					var checkedClass = value.get(index).get("checkedClass");
 					if(checkedClass == "is-checked") {
 						value.get(index).set("checkedClass", "");
+
 						self.get("selectIndexs").removeValue(index);
+						
 					}else{
 						value.get(index).set("checkedClass", "is-checked");
 						self.get("selectIndexs").push(index);

@@ -11,6 +11,12 @@ var obj = latte_lib.object.create({
 		}
 	}
 });
+obj.on("data.checkbox.selectIndexs", function(data) {
+	obj.get("data.checkbox.selectIndexs").on("change", function() {
+		obj.set("data.result", JSON.stringify(obj.get("data.checkbox.selectIndexs")));
+	});
+	obj.set("data.result", JSON.stringify(obj.get("data.checkbox.selectIndexs")));
+})
 module.exports = obj;
 });
 })(typeof define === "function"? define: function(name, reqs, factory) { factory(require, exports, module); });
@@ -99,6 +105,26 @@ module.exports = obj;
 							{
 
 							},
+							"childrens" : 
+							[
+
+							] 
+						},
+						{
+							"tag" : "p",
+							"glasss" : 
+							[
+
+							] ,
+							"latte" : 
+							{
+
+							},
+							"attribute" : 
+							{
+
+							},
+							"text" : "{{result}}",
 							"childrens" : 
 							[
 
@@ -294,6 +320,10 @@ var obj = latte_lib.object.create({
 		}
 	}
 });
+obj.on("data.radio.selectIndex", function(data) {
+	console.log(obj.get("data.radio.selectIndex"));
+	obj.set("data.result", obj.get("data.radio.selectIndex"));
+})
 module.exports = obj;
 });
 })(typeof define === "function"? define: function(name, reqs, factory) { factory(require, exports, module); });
@@ -382,6 +412,26 @@ module.exports = obj;
 							{
 
 							},
+							"childrens" : 
+							[
+
+							] 
+						},
+						{
+							"tag" : "p",
+							"glasss" : 
+							[
+
+							] ,
+							"latte" : 
+							{
+
+							},
+							"attribute" : 
+							{
+
+							},
+							"text" : "{{result}}",
 							"childrens" : 
 							[
 

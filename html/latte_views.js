@@ -29,7 +29,9 @@ module.exports = {
 					var checkedClass = value.get(index).get("checkedClass");
 					if(checkedClass == "is-checked") {
 						value.get(index).set("checkedClass", "");
+
 						self.get("selectIndexs").removeValue(index);
+						
 					}else{
 						value.get(index).set("checkedClass", "is-checked");
 						self.get("selectIndexs").push(index);
@@ -205,7 +207,8 @@ module.exports = {
 					value.get(i).set("click", createClick(i));
 				}
 			};
-			self.set("selectIndexs", []);
+			console.log(this.get("radios." + this.get("selectIndex")).set("checkedClass", "is-checked"));
+			//value.get("radios."+value.get('selectIndex')).set("checkedClass", "is-checked");
 			value.on("set", setFunc);
 			value.setFunc = setFunc;
 			value.on("splice", spliceFunc);

@@ -41,7 +41,8 @@ module.exports = {
 					value.get(i).set("click", createClick(i));
 				}
 			};
-			self.set("selectIndexs", []);
+			console.log(this.get("radios." + this.get("selectIndex")).set("checkedClass", "is-checked"));
+			//value.get("radios."+value.get('selectIndex')).set("checkedClass", "is-checked");
 			value.on("set", setFunc);
 			value.setFunc = setFunc;
 			value.on("splice", spliceFunc);
